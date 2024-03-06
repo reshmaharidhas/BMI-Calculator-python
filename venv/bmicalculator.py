@@ -8,6 +8,7 @@ Author: Reshma
 
 # importing tkinter
 import tkinter as tk
+from tkinter import messagebox
 
 class BmiCalculator:
     def __init__(self):
@@ -62,27 +63,36 @@ class BmiCalculator:
         elif self.isValidDecimal(weight)==True and self.isValidDecimal(height)==True:
             # converted height in centimetre to metre
             heightMetre = float(height)/100
-            # calculating bmi
-            bmi = float("{:.2f}".format(float(weight)/heightMetre/heightMetre))
-            # Displaying bmi through label 'bmiLabel'
-            self.bmiLabel.config(text=f"BMI is {bmi}")
-            # Category of BMI result
-            if bmi<15:
-                self.result.config(text="Very severely underweight",bg="purple",fg="white",font=("Georgia"))
-            elif bmi>=15 and bmi<16:
-                self.result.config(text="Severely underweight", bg="blue", fg="white",font=("Georgia"))
-            elif bmi>=16 and bmi<18.5:
-                self.result.config(text="Underweight", bg="#3377ff", fg="black",font=("Georgia",18))
-            elif bmi>=18.5 and bmi<=24.9:
-                self.result.config(text="Healthy", bg="green", fg="white",font=("Georgia",20))
-            elif bmi>=25 and bmi<=29.9:
-                self.result.config(text="Overweight", bg="yellow", fg="black",font=("Georgia",20))
-            elif bmi>=30 and bmi<40:
-                self.result.config(text="Obese", bg="orange", fg="black",font=("Georgia",20))
-            elif bmi>=40:
-                self.result.config(text="Extremely Obese", bg="red", fg="white",font=("Cambria",23))
+            if float(height)>=100 and (weight!=0.0 or weight!=0):
+                # calculating bmi
+                bmi = float("{:.2f}".format(float(weight)/heightMetre/heightMetre))
+                # Displaying bmi through label 'bmiLabel'
+                self.bmiLabel.config(text=f"BMI is {bmi}")
+                # Category of BMI result
+                if bmi<15:
+                    self.result.config(text="Very severely underweight",bg="purple",fg="white",font=("Georgia"))
+                elif bmi>=15 and bmi<16:
+                    self.result.config(text="Severely underweight", bg="blue", fg="white",font=("Georgia"))
+                elif bmi>=16 and bmi<18.5:
+                    self.result.config(text="Underweight", bg="#3377ff", fg="black",font=("Georgia",18))
+                elif bmi>=18.5 and bmi<=24.9:
+                    self.result.config(text="Healthy", bg="green", fg="white",font=("Georgia",20))
+                elif bmi>=25 and bmi<=29.9:
+                    self.result.config(text="Overweight", bg="yellow", fg="black",font=("Georgia",20))
+                elif bmi>=30 and bmi<40:
+                    self.result.config(text="Obese", bg="orange", fg="black",font=("Georgia",20))
+                elif bmi>=40:
+                    self.result.config(text="Extremely Obese", bg="red", fg="white",font=("Cambria",23))
+            elif heightMetre==0 or weight==0:
+                self.bmiLabel.config(text="")
+                self.result.config(text="Height and Weight cannot be 0", bg="red", font=("Arial", 15))
+            else:
+                # When entered height is less than 100
+                self.bmiLabel.config(text="")
+                self.result.config(text="", bg="#ccffff")
+                messagebox.showinfo(title="Message",message="Invalid height and weight")
         else:
-            # When the entered input in height and weight fiels is not numbers
+            # When the entered input in height and weight fields is not number
             self.bmiLabel.config(text="")
             self.result.config(text="Enter numbers only please",bg="red",font=("Arial",18))
 # object created for the class 'BmiCalculator'
