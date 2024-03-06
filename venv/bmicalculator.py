@@ -50,6 +50,7 @@ class BmiCalculator:
         height = self.height_var.get()
         # When the height and weight are empty or filled with space
         if weight=="" or weight.isspace() or height=="" or height.isspace():
+            self.bmiLabel.config(text="")
             self.result.config(text="Height and Weight cannot be empty",bg="brown",fg="white",font=("Tahoma",15))
         # when height and weight are input properly as numbers
         elif weight.isdecimal() and height.isdecimal():
@@ -76,6 +77,7 @@ class BmiCalculator:
                 self.result.config(text="Extremely Obese", bg="red", fg="white",font=("Cambria",23))
         else:
             # When the entered input in height and weight fiels is not numbers
+            self.bmiLabel.config(text="")
             self.result.config(text="Enter numbers only please",bg="red",font=("Arial",18))
 # object created for the class 'BmiCalculator'
 BmiCalculator()
