@@ -43,7 +43,13 @@ class BmiCalculator:
         self.result = tk.Label(self.root,font=("Tahoma",17),text="",height=2,width=36,bg="#ccffff")
         self.result.pack(padx=30,pady=5)
         self.root.mainloop()
-      
+
+    # Function to check if given string is a valid decimal or float
+    def isValidDecimal(self,strNum):
+        if strNum.count(".") <= 1 and strNum.replace(".", "").isnumeric():
+            return True
+        return False
+        
     # Function to calculate BMI based on inputted height and weight
     def findBMI(self):
         weight = self.weight_var.get()
@@ -53,7 +59,7 @@ class BmiCalculator:
             self.bmiLabel.config(text="")
             self.result.config(text="Height and Weight cannot be empty",bg="brown",fg="white",font=("Tahoma",15))
         # when height and weight are input properly as numbers
-        elif weight.isdecimal() and height.isdecimal():
+        elif self.isValidDecimal(weight)==True and self.isValidDecimal(height)==True:
             # converted height in centimetre to metre
             heightMetre = float(height)/100
             # calculating bmi
