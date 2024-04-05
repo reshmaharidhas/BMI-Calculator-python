@@ -1,5 +1,6 @@
 # BMI-Calculator-python
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Freshmaharidhas%2FBMI-Calculator-python%2Ftree%2Fmain&labelColor=%23000000&countColor=%2300ff00&style=plastic)
+<img src="https://img.shields.io/github/stars/reshmaharidhas/BMI-Calculator-python">
 
 Python desktop application to calculate Body Mass Index (BMI) using Tkinter
 
