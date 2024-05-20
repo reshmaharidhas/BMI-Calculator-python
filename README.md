@@ -4,6 +4,8 @@
   <img src="https://img.shields.io/github/stars/reshmaharidhas/BMI-Calculator-python">
   <img src="https://img.shields.io/github/languages/top/reshmaharidhas/BMI-Calculator-python?labelColor=black&color=%230b33e3"/>
   <img src="https://img.shields.io/github/repo-size/reshmaharidhas/BMI-Calculator-python"/>
+  <img src="https://img.shields.io/github/v/release/reshmaharidhas/BMI-Calculator-python?labelColor=%23000000"/>
+  <img src="https://img.shields.io/github/release-date/reshmaharidhas/BMI-Calculator-python?labelColor=%23000000"/>
   <img src="https://img.shields.io/github/created-at/reshmaharidhas/BMI-Calculator-python"/>
 </p>
 
