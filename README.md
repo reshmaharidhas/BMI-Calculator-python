@@ -10,9 +10,6 @@
 </p>
 
 Python desktop application to calculate Body Mass Index (BMI) using Tkinter
-
-Built using Tkinter
-
 ### Programming language
 - Python
 
