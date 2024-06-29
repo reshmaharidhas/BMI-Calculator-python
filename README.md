@@ -2,6 +2,7 @@
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Freshmaharidhas%2FBMI-Calculator-python%2Ftree%2Fmain&labelColor=%23000000&countColor=%2300ff00&style=plastic)
 <p align="center">
   <img src="https://img.shields.io/github/stars/reshmaharidhas/BMI-Calculator-python">
+  <img src="https://img.shields.io/github/downloads/reshmaharidhas/BMI-Calculator-python/total?label=GitHub%20downloads&color=%23FF0000"/>
   <img src="https://img.shields.io/github/languages/top/reshmaharidhas/BMI-Calculator-python?labelColor=black&color=%230b33e3"/>
   <img src="https://img.shields.io/github/repo-size/reshmaharidhas/BMI-Calculator-python"/>
   <img src="https://img.shields.io/github/v/release/reshmaharidhas/BMI-Calculator-python?labelColor=%23000000"/>
